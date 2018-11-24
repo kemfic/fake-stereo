@@ -20,7 +20,7 @@ def main():
   disp = cv2.imread('img/out1.png',0)
 
   # Create a random point cloud
-  pts = np.array([
+  pts = np.mgrid[0:img.size[0], 0:img.size[1]]
 
   # Color matrix based on point location
   colors = np.zeros((len(pts), 3))
