@@ -8,7 +8,7 @@ def main():
 
   # Projection and ModelView Matrices
   scam = pango.OpenGlRenderState(
-                  pango.ProjectionMatrix(640, 480, 420, 420, 320, 240, 50, 100000),
+                  pango.ProjectionMatrix(640, 480, 420, 420, 320, 240, 500, 100000),
                   pango.ModelViewLookAt(-10, -10, -10, 0, 0, 0, pango.AxisDirection.AxisY))
   handler = pango.Handler3D(scam)
 
@@ -18,8 +18,8 @@ def main():
   disp_cam.SetHandler(handler)
   w = 250
   h = 50
-  img = cv2.imread('img/1.png',0)[:w,70:500]
-  disp = cv2.imread('img/out1.png',0)[:w,70:500] * 5.0
+  img = cv2.imread('img/2_.jpg')#[:w,70:500]
+  disp = cv2.imread('img/out1.png',0) * 5.0#[:w,70:500] * 5.0
 
   # Add point locations using pixel location and z-distance from disparity map
   # lazy man's point cloud
@@ -30,7 +30,7 @@ def main():
   pts = -1.0 * pts.reshape(pts.shape[0]*pts.shape[1], 3)
   # Color matrix based on point location
 
-  colors = np.dstack((img,img,img)) / 512.0
+  colors = img /512.0#np.dstack((img,img,img))
   colors = colors.reshape(colors.shape[0]*colors.shape[1],3)
   #colors[:, :] = 1. - img[:,:]/10
   #colors[:] = [0.5, 0.5, 0.5]
