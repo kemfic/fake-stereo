@@ -20,7 +20,7 @@ def main():
   disp_cam.SetHandler(handler)
   w = 250
   h = 50
-  img = cv2.imread('img/2_.jpg')#[:w,70:500]
+  img = cv2.imread('img/2.png')#[:w,70:500]
   disp = cv2.imread('img/out1.png',0) * 5.0#[:w,70:500] * 5.0
   print(disp[0,200])
   # Add point locations using pixel location and z-distance from disparity map
