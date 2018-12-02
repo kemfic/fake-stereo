@@ -5,7 +5,7 @@ import numpy as np
 
 def main():
   pango.CreateWindowAndBind('fake stereo', 640, 480)
-  gl.glEnable(GL_DEPTH_TEST) #fixes point overlapping issue
+  gl.glEnable(gl.GL_DEPTH_TEST) #fixes point overlapping issue
 
 
   # Projection and ModelView Matrices
