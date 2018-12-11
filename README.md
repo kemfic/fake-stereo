@@ -11,10 +11,8 @@ use two image frames from the same camera, taken at two different points in time
 #### Note: does not work well
 ![img](resources/fail.png)
 
-
-the viewer is garbage recycled code. should probably fix it, but i doubt i ever will.
-
 todo
 ---
+ - make it not garbage
  - move out of a notebook into a script
     - supply arguments for input images and viewer
